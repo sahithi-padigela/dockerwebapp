@@ -1,14 +1,14 @@
 
 services:
   devopsdb:
-    image: shaikmustafa/flm-oct:db
+    image: mydb
     ports:
       - "3306:3306"
     networks:
       - mynetwork
 
   application:
-    image: shaikmustafa/flm-oct:javaapp
+    image: myapp
     ports:
       - "1111:8080"
     depends_on:
